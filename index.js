@@ -1,6 +1,6 @@
 import 'jquery/dist/jquery.min.js';
 import 'lodash/lodash.min.js';
-import 'core-js/client/shim.min.js';
+import 'babel-polyfill/dist/polyfill.min.js';
 import 'whatwg-fetch';
 import 'riot/riot.min.js';
 import 'moment/min/moment.min.js';

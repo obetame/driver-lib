@@ -1,1 +1,2 @@
+- 0.1.1 Use babel-polyfill instead of core-js
 - 0.1.0 init

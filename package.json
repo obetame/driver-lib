@@ -1,14 +1,14 @@
 {
   "name": "driver-lib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "driver lib",
   "main": "dist/driver-lib.min.js",
   "scripts": {
     "rollup": "./node_modules/.bin/rollup -c rollup.config.js",
     "uglify": "./node_modules/.bin/uglifyjs -c -m -o dist/driver-lib.min.js dist/driver-lib.js",
-		"build": "npm run rollup && npm run uglify",
-		"eslint": "./node_modules/.bin/eslint -c .eslintrc.yml .",
-		"test": "npm run eslint && npm run build"
+    "build": "npm run rollup && npm run uglify",
+    "eslint": "./node_modules/.bin/eslint -c .eslintrc.yml .",
+    "test": "npm run eslint && npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,15 +25,15 @@
   },
   "homepage": "https://github.com/RiceQuant-FE/driver-lib#readme",
   "dependencies": {
-    "core-js": "2.4.1",
+    "babel-polyfill": "6.23.0",
     "hogan.js": "3.0.2",
     "jquery": "3.2.1",
     "lodash": "4.17.4",
     "moment": "2.18.1",
     "riot": "3.6.1",
     "rollup": "0.45.2",
-    "rollup-plugin-node-resolve": "3.0.0",
     "rollup-plugin-commonjs": "8.0.2",
+    "rollup-plugin-node-resolve": "3.0.0",
     "url-search-params": "0.7.1",
     "whatwg-fetch": "2.0.3"
   },
