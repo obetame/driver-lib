@@ -31,7 +31,7 @@ For browser you could get the dist file [here](./dist/driver-lib.min.js).
 
 - lodash
 - jquery
-- core-js
+- babel-polyfill
 - fetch
 - riot
 - moment
