@@ -1,1 +1,61 @@
 # driver-lib
+
+[![Build Status][ci-img]][ci-url]
+[![Code GPA][gpa-img]][gpa-url]
+[![Code style][lint-img]][lint-url]
+[![Dependency Status][dep-img]][dep-url]
+[![Dev Dependency Status][dev-dep-img]][dev-dep-url]
+[![NPM version][npm-ver-img]][npm-url]
+[![NPM downloads][npm-dl-img]][npm-url]
+[![NPM license][npm-lc-img]][npm-url]
+
+A third-party lib for drivers.
+
+## How to use
+
+By npm:
+
+```shell
+npm i driver-lib --save
+```
+
+By yarn:
+
+```shell
+yarn add driver-lib
+```
+
+For browser you could get the dist file [here](./dist/driver-lib.min.js).
+
+## What's in it
+
+- lodash
+- jquery
+- core-js
+- fetch
+- riot
+- moment
+- hogan runtime
+- url-search-params
+
+You could find the version number of those libs in file `package.json`.
+
+[ci-img]:https://img.shields.io/travis/RiceQuant-FE/driver-lib.svg?style=flat-square
+[ci-url]:https://travis-ci.org/RiceQuant-FE/driver-lib
+
+[gpa-img]:https://img.shields.io/codeclimate/github/RiceQuant-FE/driver-lib.svg?style=flat-square
+[gpa-url]:https://codeclimate.com/github/RiceQuant-FE/driver-lib
+
+[lint-img]:https://img.shields.io/badge/code%20style-handsome-brightgreen.svg?style=flat-square
+[lint-url]:https://github.com/poppinlp/eslint-config-handsome
+
+[dep-img]:https://img.shields.io/david/RiceQuant-FE/driver-lib.svg?style=flat-square
+[dep-url]:https://david-dm.org/RiceQuant-FE/driver-lib
+
+[dev-dep-img]:https://img.shields.io/david/dev/RiceQuant-FE/driver-lib.svg?style=flat-square
+[dev-dep-url]:https://david-dm.org/RiceQuant-FE/driver-lib#info=devDependencies
+
+[npm-ver-img]:https://img.shields.io/npm/v/driver-lib.svg?style=flat-square
+[npm-dl-img]:https://img.shields.io/npm/dm/driver-lib.svg?style=flat-square
+[npm-lc-img]:https://img.shields.io/npm/l/driver-lib.svg?style=flat-square
+[npm-url]:https://www.npmjs.com/package/driver-lib
