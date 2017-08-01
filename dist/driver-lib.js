@@ -639,7 +639,32 @@ var template3_0_2_min = createCommonjsModule(function (module, exports) {
 var Hogan={};!function(t){function i(t,i,s){var e;return i&&"object"==typeof i&&(void 0!==i[t]?e=i[t]:s&&i.get&&"function"==typeof i.get&&(e=i.get(t))),e}function s(t,i,s,e,n,r){function o(){}function u(){}o.prototype=t,u.prototype=t.subs;var a,c=new o;c.subs=new u,c.subsText={},c.buf="",e=e||{},c.stackSubs=e,c.subsText=r;for(a in i)e[a]||(e[a]=i[a]);for(a in e)c.subs[a]=e[a];n=n||{},c.stackPartials=n;for(a in s)n[a]||(n[a]=s[a]);for(a in n)c.partials[a]=n[a];return c}function e(t){return String(null===t||void 0===t?"":t)}function n(t){return t=e(t),h.test(t)?t.replace(r,"&amp;").replace(o,"&lt;").replace(u,"&gt;").replace(a,"&#39;").replace(c,"&quot;"):t}t.Template=function(t,i,s,e){t=t||{},this.r=t.code||this.r,this.c=s,this.options=e||{},this.text=i||"",this.partials=t.partials||{},this.subs=t.subs||{},this.buf="";},t.Template.prototype={r:function(){return""},v:n,t:e,render:function(t,i,s){return this.ri([t],i||{},s)},ri:function(t,i,s){return this.r(t,i,s)},ep:function(t,i){var e=this.partials[t],n=i[e.name];if(e.instance&&e.base==n)return e.instance;if("string"==typeof n){if(!this.c)throw new Error("No compiler available.");n=this.c.compile(n,this.options);}if(!n)return null;if(this.partials[t].base=n,e.subs){i.stackText||(i.stackText={});for(key in e.subs)i.stackText[key]||(i.stackText[key]=void 0!==this.activeSub&&i.stackText[this.activeSub]?i.stackText[this.activeSub]:this.text);n=s(n,e.subs,e.partials,this.stackSubs,this.stackPartials,i.stackText);}return this.partials[t].instance=n,n},rp:function(t,i,s,e){var n=this.ep(t,s);return n?n.ri(i,s,e):""},rs:function(t,i,s){var e=t[t.length-1];if(!f(e))return void s(t,i,this);for(var n=0;n<e.length;n++)t.push(e[n]),s(t,i,this),t.pop();},s:function(t,i,s,e,n,r,o){var u;return f(t)&&0===t.length?!1:("function"==typeof t&&(t=this.ms(t,i,s,e,n,r,o)),u=!!t,!e&&u&&i&&i.push("object"==typeof t?t:i[i.length-1]),u)},d:function(t,s,e,n){var r,o=t.split("."),u=this.f(o[0],s,e,n),a=this.options.modelGet,c=null;if("."===t&&f(s[s.length-2]))u=s[s.length-1];else for(var h=1;h<o.length;h++)r=i(o[h],u,a),void 0!==r?(c=u,u=r):u="";return n&&!u?!1:(n||"function"!=typeof u||(s.push(c),u=this.mv(u,s,e),s.pop()),u)},f:function(t,s,e,n){for(var r=!1,o=null,u=!1,a=this.options.modelGet,c=s.length-1;c>=0;c--)if(o=s[c],r=i(t,o,a),void 0!==r){u=!0;break}return u?(n||"function"!=typeof r||(r=this.mv(r,s,e)),r):n?!1:""},ls:function(t,i,s,n,r){var o=this.options.delimiters;return this.options.delimiters=r,this.b(this.ct(e(t.call(i,n)),i,s)),this.options.delimiters=o,!1},ct:function(t,i,s){if(this.options.disableLambda)throw new Error("Lambda features disabled.");return this.c.compile(t,this.options).render(i,s)},b:function(t){this.buf+=t;},fl:function(){var t=this.buf;return this.buf="",t},ms:function(t,i,s,e,n,r,o){var u,a=i[i.length-1],c=t.call(a);return"function"==typeof c?e?!0:(u=this.activeSub&&this.subsText&&this.subsText[this.activeSub]?this.subsText[this.activeSub]:this.text,this.ls(c,a,s,u.substring(n,r),o)):c},mv:function(t,i,s){var n=i[i.length-1],r=t.call(n);return"function"==typeof r?this.ct(e(r.call(n)),n,s):r},sub:function(t,i,s,e){var n=this.subs[t];n&&(this.activeSub=t,n(i,s,this,e),this.activeSub=!1);}};var r=/&/g,o=/</g,u=/>/g,a=/\'/g,c=/\"/g,h=/[&<>\"\']/,f=Array.isArray||function(t){return"[object Array]"===Object.prototype.toString.call(t)};}(exports);
 });
 
-function URLSearchParams$1(query) {
+var urlSearchParams_node = createCommonjsModule(function (module) {
+/*!
+Copyright (C) 2015-2017 Andrea Giammarchi - @WebReflection
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+*/
+'use strict';
+
+function URLSearchParams(query) {
   var
     index, key, value,
     pairs, i, length,
@@ -688,11 +713,12 @@ function URLSearchParams$1(query) {
   }
 }
 
-var isArray = Array.isArray;
-var URLSearchParamsProto = URLSearchParams$1.prototype;
-var find = /[!'\(\)~]|%20|%00/g;
-var plus = /\+/g;
-var replace = {
+var
+  isArray = Array.isArray,
+  URLSearchParamsProto = URLSearchParams.prototype,
+  find = /[!'\(\)~]|%20|%00/g,
+  plus = /\+/g,
+  replace = {
     '!': '%21',
     "'": '%27',
     '(': '%28',
@@ -700,12 +726,11 @@ var replace = {
     '~': '%7E',
     '%20': '+',
     '%00': '\x00'
-  };
-var replacer = function (match) {
+  },
+  replacer = function (match) {
     return replace[match];
-  };
-var iterable = isIterable();
-var secret = '__URLSearchParams__:' + Math.random();
+  },
+  secret = '__URLSearchParams__:' + Math.random();
 
 function appendTo(dict, name, value) {
   if (name in dict) {
@@ -721,14 +746,6 @@ function decode(str) {
 
 function encode(str) {
   return encodeURIComponent(str).replace(find, replacer);
-}
-
-function isIterable() {
-  try {
-    return !!Symbol.iterator;
-  } catch(error) {
-    return false;
-  }
 }
 
 URLSearchParamsProto.append = function append(name, value) {
@@ -766,67 +783,6 @@ URLSearchParamsProto.forEach = function forEach(callback, thisArg) {
   }, this);
 };
 
-URLSearchParamsProto.keys = function keys() {
-  var items = [];
-  this.forEach(function(value, name) { items.push(name); });
-  var iterator = {
-    next: function() {
-      var value = items.shift();
-      return {done: value === undefined, value: value};
-    }
-  };
-
-  if (iterable) {
-    iterator[Symbol.iterator] = function() {
-      return iterator;
-    };
-  }
-
-  return iterator;
-};
-
-URLSearchParamsProto.values = function values() {
-  var items = [];
-  this.forEach(function(value) { items.push(value); });
-  var iterator = {
-    next: function() {
-      var value = items.shift();
-      return {done: value === undefined, value: value};
-    }
-  };
-
-  if (iterable) {
-    iterator[Symbol.iterator] = function() {
-      return iterator;
-    };
-  }
-
-  return iterator;
-};
-
-URLSearchParamsProto.entries = function entries() {
-  var items = [];
-  this.forEach(function(value, name) { items.push([name, value]); });
-  var iterator = {
-    next: function() {
-      var value = items.shift();
-      return {done: value === undefined, value: value};
-    }
-  };
-
-  if (iterable) {
-    iterator[Symbol.iterator] = function() {
-      return iterator;
-    };
-  }
-
-  return iterator;
-};
-
-if (iterable) {
-  URLSearchParamsProto[Symbol.iterator] = URLSearchParamsProto.entries;
-}
-
 /*
 URLSearchParamsProto.toBody = function() {
   return new Blob(
@@ -855,7 +811,136 @@ URLSearchParamsProto.toString = function toString() {
   return query.join('&');
 };
 
-var urlSearchParams_node = commonjsGlobal.URLSearchParams || URLSearchParams$1;
+URLSearchParams = (module.exports = commonjsGlobal.URLSearchParams || URLSearchParams);
+
+(function (URLSearchParamsProto) {
+
+  var iterable = (function () {
+    try {
+      return !!Symbol.iterator;
+    } catch(error) {
+      return false;
+    }
+  }());
+
+  // mostly related to issue #24
+  if (!('forEach' in URLSearchParamsProto)) {
+    URLSearchParamsProto.forEach = function forEach(callback, thisArg) {
+      var names = Object.create(null);
+      this.toString()
+          .replace(/=[\s\S]*?(?:&|$)/g, '=')
+          .split('=')
+          .forEach(function (name) {
+            if (!name.length || name in names) return;
+            (names[name] = this.getAll(name)).forEach(function(value) {
+              callback.call(thisArg, value, name, this);
+            }, this);
+          }, this);
+    };
+  }
+
+  if (!('keys' in URLSearchParamsProto)) {
+    URLSearchParamsProto.keys = function keys() {
+      var items = [];
+      this.forEach(function(value, name) { items.push(name); });
+      var iterator = {
+        next: function() {
+          var value = items.shift();
+          return {done: value === undefined, value: value};
+        }
+      };
+
+      if (iterable) {
+        iterator[Symbol.iterator] = function() {
+          return iterator;
+        };
+      }
+
+      return iterator;
+    };
+  }
+
+  if (!('values' in URLSearchParamsProto)) {
+    URLSearchParamsProto.values = function values() {
+      var items = [];
+      this.forEach(function(value) { items.push(value); });
+      var iterator = {
+        next: function() {
+          var value = items.shift();
+          return {done: value === undefined, value: value};
+        }
+      };
+
+      if (iterable) {
+        iterator[Symbol.iterator] = function() {
+          return iterator;
+        };
+      }
+
+      return iterator;
+    };
+  }
+
+  if (!('entries' in URLSearchParamsProto)) {
+    URLSearchParamsProto.entries = function entries() {
+      var items = [];
+      this.forEach(function(value, name) { items.push([name, value]); });
+      var iterator = {
+        next: function() {
+          var value = items.shift();
+          return {done: value === undefined, value: value};
+        }
+      };
+
+      if (iterable) {
+        iterator[Symbol.iterator] = function() {
+          return iterator;
+        };
+      }
+
+      return iterator;
+    };
+  }
+
+  if (iterable && !(Symbol.iterator in URLSearchParamsProto)) {
+    URLSearchParamsProto[Symbol.iterator] = URLSearchParamsProto.entries;
+  }
+
+  if (!('sort' in URLSearchParamsProto)) {
+    URLSearchParamsProto.sort = function sort() {
+      var
+        entries = this.entries(),
+        entry = entries.next(),
+        done = entry.done,
+        keys = [],
+        values = Object.create(null),
+        i, key, value;
+      while (!done) {
+        value = entry.value;
+        key = value[0];
+        keys.push(key);
+        if (!(key in values)) {
+          values[key] = [];
+        }
+        values[key].push(value[1]);
+        entry = entries.next();
+        done = entry.done;
+      }
+      // not the champion in efficiency
+      // but these two bits just do the job
+      keys.sort();
+      for (i = 0; i < keys.length; i++) {
+        this.delete(keys[i]);
+      }
+      for (i = 0; i < keys.length; i++) {
+        key = keys[i];
+        this.append(key, values[key].shift());
+      }
+    };
+  }
+
+}(URLSearchParams.prototype));
+});
 
 window.Hogan = template3_0_2_min;
 
