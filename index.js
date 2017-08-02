@@ -1,12 +1,30 @@
-import 'jquery/dist/jquery.min.js';
-import 'lodash/lodash.min.js';
-import 'babel-polyfill/dist/polyfill.min.js';
-import 'whatwg-fetch';
-import 'riot/riot.min.js';
-import 'moment/min/moment.min.js';
+const
+	fs = require('fs'),
+	path = require('path');
+const
+	yml = require('js-yaml');
+const
+	LODASH_PLACE_HOLDER = '/* LODASH */',
+	LODASH_CONFIG_PATH = path.join('./config/lodash.yml'),
+	BUILD_TEMPLATE_PATH = path.join('./config/build.js'),
+	BUILD_PATH = path.join('./config/.build_tmp.js');
+const
+	lodashImportList = [],
+	lodashExportList = [];
 
-import H from 'hogan.js/dist/template-3.0.2.min.js';
-window.Hogan = H;
+yml.safeLoad(fs.readFileSync(LODASH_CONFIG_PATH)).forEach(name => {
+	lodashImportList.push(`import _${name} from 'lodash/${name}';`);
+	lodashExportList.push(`${name}: _${name},`);
+});
 
-import U from 'url-search-params/build/url-search-params.node.js';
-window.URLSearchParams = window.URLSearchParams || U;
+fs.writeFileSync(BUILD_PATH,
+	fs.readFileSync(BUILD_TEMPLATE_PATH, 'utf8').replace(
+		LODASH_PLACE_HOLDER,
+		`
+			${lodashImportList.join('')}
+			window._ = {
+				${lodashExportList.join('')}
+			};
+		`
+	)
+);
