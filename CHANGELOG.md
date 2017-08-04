@@ -1,3 +1,11 @@
-- 0.1.2 Build lodash from config file. Reduce size of dist min file from 332KB to 292KB.
-- 0.1.1 Use babel-polyfill instead of core-js.
-- 0.1.0 init.
+- 0.2.0
+	- Add numeral.
+	- Use lodash-builder to build custom lodash.
+	- Add `merge` for lodash.
+- 0.1.2
+	- Build lodash from config file.
+	- Reduce size of dist min file from 332KB to 292KB.
+- 0.1.1
+	- Use babel-polyfill instead of core-js.
+- 0.1.0
+	- init.

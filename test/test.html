@@ -1,1 +1,18 @@
 <script src="../dist/driver-lib.min.js"></script>
+<script>
+	[
+		'_',
+		'$',
+		'fetch',
+		'riot',
+		'moment',
+		'Hogan',
+		'URLSearchParams',
+		'numeral',
+		'regeneratorRuntime'
+	].forEach(item => {
+		if (!window[item]) {
+			alert(`No ${item} on window`);
+		}
+	});
+</script>

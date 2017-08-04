@@ -1,7 +1,6 @@
 # driver-lib
 
 [![Build Status][ci-img]][ci-url]
-[![Code GPA][gpa-img]][gpa-url]
 [![Code style][lint-img]][lint-url]
 [![Dependency Status][dep-img]][dep-url]
 [![Dev Dependency Status][dev-dep-img]][dev-dep-url]
@@ -29,22 +28,18 @@ For browser you could get the dist file [here](./dist/driver-lib.min.js).
 
 ## What's in it
 
-- lodash
-- jquery
-- babel-polyfill
-- fetch
-- riot
-- moment
-- hogan runtime
-- url-search-params
-
-You could find the version number of those libs in file `package.json`.
+- [lodash](https://www.npmjs.com/package/lodash) by [lodash-builder](https://github.com/poppinlp/lodash-builder)
+- [jquery](https://www.npmjs.com/package/jquery)
+- [babel-polyfill](https://www.npmjs.com/package/babel-polyfill)
+- [fetch](https://www.npmjs.com/package/whatwg-fetch)
+- [riot](https://www.npmjs.com/package/riot)
+- [moment](https://www.npmjs.com/package/moment)
+- [hogan.js](https://www.npmjs.com/package/hogan.js)
+- [url-search-params](https://www.npmjs.com/package/url-search-params)
+- [numeral](https://www.npmjs.com/package/numeral)
 
 [ci-img]:https://img.shields.io/travis/RiceQuant-FE/driver-lib.svg?style=flat-square
 [ci-url]:https://travis-ci.org/RiceQuant-FE/driver-lib
-
-[gpa-img]:https://img.shields.io/codeclimate/github/RiceQuant-FE/driver-lib.svg?style=flat-square
-[gpa-url]:https://codeclimate.com/github/RiceQuant-FE/driver-lib
 
 [lint-img]:https://img.shields.io/badge/code%20style-handsome-brightgreen.svg?style=flat-square
 [lint-url]:https://github.com/poppinlp/eslint-config-handsome
