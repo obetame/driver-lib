@@ -2,6 +2,7 @@
 	- Add numeral.
 	- Use lodash-builder to build custom lodash.
 	- Add `merge` for lodash.
+	- Add test case
 - 0.1.2
 	- Build lodash from config file.
 	- Reduce size of dist min file from 332KB to 292KB.
