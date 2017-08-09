@@ -1,3 +1,5 @@
+- 0.2.1
+	- Add `assign` for lodash.
 - 0.2.0
 	- Add numeral.
 	- Use lodash-builder to build custom lodash.
