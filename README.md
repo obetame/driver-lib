@@ -32,7 +32,6 @@ For browser you could get the dist file [here](./dist/driver-lib.min.js).
 - [jquery](https://www.npmjs.com/package/jquery)
 - [babel-polyfill](https://www.npmjs.com/package/babel-polyfill)
 - [fetch](https://www.npmjs.com/package/whatwg-fetch)
-- [riot](https://www.npmjs.com/package/riot)
 - [moment](https://www.npmjs.com/package/moment)
 - [hogan.js](https://www.npmjs.com/package/hogan.js)
 - [url-search-params](https://www.npmjs.com/package/url-search-params)

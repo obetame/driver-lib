@@ -2,7 +2,6 @@
 	'_',
 	'$',
 	'fetch',
-	'riot',
 	'moment',
 	'Hogan',
 	'URLSearchParams',

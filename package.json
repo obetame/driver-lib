@@ -1,6 +1,6 @@
 {
   "name": "driver-lib",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "driver lib",
   "main": "dist/driver-lib.min.js",
   "scripts": {
@@ -26,26 +26,25 @@
   },
   "homepage": "https://github.com/RiceQuant-FE/driver-lib#readme",
   "dependencies": {
-    "babel-polyfill": "6.23.0",
+    "babel-polyfill": "6.26.0",
     "hogan.js": "3.0.2",
     "jquery": "3.2.1",
     "js-yaml": "3.9.1",
     "lodash-builder": "0.1.2",
     "moment": "2.18.1",
     "numeral": "2.0.6",
-    "riot": "3.6.1",
-    "rollup": "0.45.2",
-    "rollup-plugin-commonjs": "8.1.0",
+    "rollup": "0.49.2",
+    "rollup-plugin-commonjs": "8.2.0",
     "rollup-plugin-node-resolve": "3.0.0",
-    "uglify-es": "3.0.27",
+    "uglify-es": "3.0.28",
     "url-search-params": "0.10.0",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
-    "ava": "0.21.0",
-    "eslint": "4.4.1",
+    "ava": "0.22.0",
+    "eslint": "4.5.0",
     "eslint-config-handsome": "0.2.5",
-    "jsdom": "11.1.0",
+    "jsdom": "11.2.0",
     "tap-diff": "0.1.1"
   }
 }
