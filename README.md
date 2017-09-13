@@ -36,6 +36,7 @@ For browser you could get the dist file [here](./dist/driver-lib.min.js).
 - [hogan.js](https://www.npmjs.com/package/hogan.js)
 - [url-search-params](https://www.npmjs.com/package/url-search-params)
 - [numeral](https://www.npmjs.com/package/numeral)
+- [vue](https://www.npmjs.com/package/vue)
 
 [ci-img]:https://img.shields.io/travis/RiceQuant-FE/driver-lib.svg?style=flat-square
 [ci-url]:https://travis-ci.org/RiceQuant-FE/driver-lib

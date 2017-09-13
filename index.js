@@ -27,7 +27,7 @@ lodashBuilder({ // Make custom lodash
 		)
 	);
 }).then(() => rollup({ // Rollup pack
-	entry: BUILD_PATH,
+	input: BUILD_PATH,
 	context: 'window',
 	plugins: [
 		require('rollup-plugin-node-resolve')({
@@ -48,8 +48,8 @@ lodashBuilder({ // Make custom lodash
 		})
 	]
 })).then(bundle => bundle.write({ // Write bundle output
-	dest: 'dist/driver-lib.js',
-	moduleName: '',
+	file: 'dist/driver-lib.js',
+	name: '',
 	format: 'iife'
 })).catch(err => {
 	console.error(err);

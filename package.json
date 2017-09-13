@@ -1,6 +1,6 @@
 {
   "name": "driver-lib",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "driver lib",
   "main": "dist/driver-lib.min.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "rollup-plugin-node-resolve": "3.0.0",
     "uglify-es": "3.0.28",
     "url-search-params": "0.10.0",
+    "vue": "2.4.3",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
